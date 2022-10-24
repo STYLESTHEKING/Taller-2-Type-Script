@@ -20,8 +20,8 @@ function renderTable(series: serie[]): void {
 
 function serieInfo(serie: serie): void {
   let ser = serie;
-  let cardBody: HTMLElement = document.getElementById("seriescards")!;
-  cardBody.innerHTML = `<div class="card" style="text-align: justify; width: 30rem;">
+  let info: HTMLElement = document.getElementById("seriescards")!;
+  info.innerHTML = `<div class="card" style="text-align: justify; width: 30rem;">
                           <img src="${ser.picture}" alt="${ser.name}">
                           <div class="card-body">
                             <h5 class="card-title"><strong>${ser.name}</strong></h5>
