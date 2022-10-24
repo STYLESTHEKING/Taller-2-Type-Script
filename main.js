@@ -14,12 +14,12 @@ function renderTable(series) {
 function serieInfo(serie) {
     var ser = serie;
     var info = document.getElementById("seriescards");
-    cardBody.innerHTML = "<div class=\"card\" style=\"text-align: justify; width: 30rem;\">\n  <img src=\"".concat(ser.image, "\" alt=\"").concat(c.name, "\">\n   <div class=\"card-body\">\n     <h5 class=\"card-title\"><strong>").concat(ser.name, "</strong></h5>\n     <p class=\"card-text\">").concat(ser.description, "</p>\n   <a href=\"").concat(ser.review, "\" target = \"_blank\" style=\"text-decoration: none\"<span>").concat(ser.review, "</span></a>\n   </div>\n    </div>");
+    info.innerHTML = "<div class=\"card\" style=\"text-align: justify; width: 30rem;\">\n  <img src=\"".concat(ser.image, "\" alt=\"").concat(c.name, "\">\n   <div class=\"card-body\">\n     <h5 class=\"card-title\"><strong>").concat(ser.name, "</strong></h5>\n     <p class=\"card-text\">").concat(ser.description, "</p>\n   <a href=\"").concat(ser.review, "\" target = \"_blank\" style=\"text-decoration: none\"<span>").concat(ser.review, "</span></a>\n   </div>\n    </div>");
 }
 
 function averageSeasons(series) {
     var totalS = 0;
-    var averageSeasons = document.getElementById("average-seasons");
+    var avgss = document.getElementById("average-seasons");
     series.forEach(function (serie) { (totalS += serie.season); });
     avgss.innerHTML = "".concat((totalS / series.length));
 }
