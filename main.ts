@@ -12,18 +12,10 @@ function renderTable(series: serie[]): void {
     trElement.innerHTML = `<td>${serie.id}</td>
                            <td style="color: #0051ff;"><a href="#" style="text-decoration: none">${serie.name}</a></td>
                            <td>${serie.channel}</td>
-                           <td>${serie.season}</td>`;
+                           <td>${serie.seasons}</td>`;
     seriestbody.appendChild(trElement);
     trElement.children[1].children[0].addEventListener('click', () => serieInfo(serie));
   });  
-}
-
-
-function averageSeasons(series: serie[]): void {
-  let totalS: number = 0;
-  let avgss: HTMLElement = document.getElementById("average-seasons")!;
-  series.forEach((serie) => {(totalS += serie.season)});
-  avgss.innerHTML = `${(totalS / series.length)}`;
 }
 
 function serieInfo(serie: serie): void {
@@ -38,3 +30,11 @@ function serieInfo(serie: serie): void {
                           </div>
                         </div>`;
 }
+
+function averageSeasons(series: serie[]): void {
+  let totalS: number = 0;
+  let avgss: HTMLElement = document.getElementById("average-seasons")!;
+  series.forEach((serie) => {(totalS += serie.seasons)});
+  avgss.innerHTML = `${(totalS / series.length)}`;
+}
+
