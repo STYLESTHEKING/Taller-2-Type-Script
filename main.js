@@ -1,5 +1,5 @@
 import { lSeries } from './dataSeries.js';
-var seriestbody = document.getElementById('series'); // tbody que tiene el id "serie"
+var seriestbody = document.getElementById('serie'); // tbody que tiene el id "serie"
 renderTable(lSeries);
 averageSeasons(lSeries);
 function renderTable(series) {
