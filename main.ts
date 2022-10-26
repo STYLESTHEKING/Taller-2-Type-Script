@@ -27,14 +27,14 @@ function averageSeasons(series: serie[]): void {
 }
 
 function serieInfo(serie: serie): void {
-  let c = serie;
+  let ser = serie;
   let cardBody: HTMLElement = document.getElementById("seriescards")!;
   cardBody.innerHTML = `<div class="card" style="text-align: justify; width: 30rem;">
-                          <img src="${c.picture}" alt="${c.name}">
+                          <img src="${ser.picture}" alt="${ser.name}">
                           <div class="card-body">
-                            <h5 class="card-title"><strong>${c.name}</strong></h5>
-                            <p class="card-text">${c.description}</p>
-                            <a href="${c.review}" target = "_blank" style="text-decoration: none"<span>${c.review}</span></a>
+                            <h5 class="card-title"><strong>${ser.name}</strong></h5>
+                            <p class="card-text">${ser.description}</p>
+                            <a href="${ser.review}" target = "_blank" style="text-decoration: none"<span>${ser.review}</span></a>
                           </div>
                         </div>`;
 }
